@@ -57,6 +57,32 @@
     background-color: #8fcae7;
     padding: 0;
   }
+  .home {
+    width: 100px;
+    height: 100%;
+    background-color: #8fcae7;
+    transition: transform 0.3s ease;
+    border: none;
+    padding: 0;
+  }
+  .menu {
+    width: 50%;
+    padding-left: 300 px;
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    width: 100%;
+    background-image: url(_DSC9043-1920.original.png);
+    /* height: 300px; */
+    text-align: center;
+    padding: 150px 0;
+    font-family:    Arial, Helvetica, sans-serif;
+                font-size:      40px;
+                font-weight:    bold;
+                color: #fff;
+                
+  }
 </style>
 </head>
 <body>
@@ -66,11 +92,24 @@
     </div>
 
 <div id="header" class="header">
-Home - Transcibeer tool - Gebruikershandeleiding
+ 
+  <div id="menu" class="menu">
+
+  <button class="home"> <img src="home-logo.png"> home</button>
+
+<!-- <div id="home" class="home">
+  <img src="home-logo.png">
+  Home
+</div> -->
+
+ - Gebruikershandeleiding
+</div></div>
+<div id="title" class="title">
+ <span style=""> Transcribeer tool </span>
 </div>
 
 <div id="transcription">
-  <h1>Transcriber Tool</h1>
+
   <div class="upload-section">
   <button id="startMeeting" class="oval-button" style="background-image: url('microphone.png');">Start meeting</button>
 </div>
