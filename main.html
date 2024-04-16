@@ -74,14 +74,31 @@
   .title {
     width: 100%;
     background-image: url(_DSC9043-1920.original.png);
+    background-position: 50% 70%;
     /* height: 300px; */
-    text-align: center;
-    padding: 150px 0;
+    text-align: left;
+    padding: 70px 0;
     font-family:    Arial, Helvetica, sans-serif;
-                font-size:      40px;
+                font-size:      60px;
                 font-weight:    bold;
                 color: #fff;
+                text-shadow: 0 2px 2px #000;
                 
+  }
+  .bottom {
+    position: absolute;
+            bottom: 0;
+            left: 0;
+    background-color: #eef7fb;
+    height: 35px;
+    width: 100%;
+    display: flex;
+    color: #01689b;
+
+	flex-direction: row;
+			align-items: center;
+      font-weight: bold;
+  
   }
 </style>
 </head>
@@ -105,7 +122,7 @@
  - Gebruikershandeleiding
 </div></div>
 <div id="title" class="title">
- <span style=""> Transcribeer tool </span>
+ <span style="padding-left: 50px;"> Transcribeer tool </span>
 </div>
 
 <div id="transcription">
@@ -117,6 +134,10 @@
     <input type="file" id="fileInput" accept=".txt" onchange="handleFile(this.files)" style="display: none;">
     <button class="upload-btn" onclick="document.getElementById('fileInput').click();" style="background-image: url('upload.png');">File Upload</button>
   </div>
+</div>
+
+<div id="bottom" class="bottom">
+  <span style="padding-left: 50px;">Copyright</span>
 </div>
 
 <script>
