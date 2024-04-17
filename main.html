@@ -9,7 +9,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #eef7fb;
     /*display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +19,10 @@
     text-align: center;
     margin-bottom: 30px;
   }
+  @font-face {
+    font-family: Rijksoverheid;
+    src: url(rijksoverheidsanstext-regular.ttf);
+}
   .oval-button,
   .upload-btn {
     background-color: #007bff;
@@ -56,14 +60,38 @@
     height: 60px;
     background-color: #8fcae7;
     padding: 0;
+    
+   
+    
   }
-  .home {
+  .buttonheader {
     width: 100px;
-    height: 100%;
+    height: 60px;
     background-color: #8fcae7;
-    transition: transform 0.3s ease;
-    border: none;
-    padding: 0;
+        border: none;
+        font-family:    Rijksoverheid, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+        
+        
+  }   
+  .buttoncenter {
+    display: flex;
+	
+	/* Make a horizontal flexbox (the default) */
+	flex-direction: row;
+	
+	/* The important part: vertically center the items */
+	align-items: center;
+ text-align: center;
+  
+
+   
+  }
+  .buttonheader:hover {
+    
+    background-color: #a5d4eb; 
+      
+    
   }
   .menu {
     width: 50%;
@@ -77,10 +105,20 @@
     background-position: 50% 70%;
     /* height: 300px; */
     text-align: left;
-    padding: 70px 0;
-    font-family:    Arial, Helvetica, sans-serif;
+    padding: 50px 0;    
+                
+  }
+  .titlemain {
+        font-family:    Rijksoverheid, Arial, Helvetica, sans-serif;    
                 font-size:      60px;
                 font-weight:    bold;
+                color: #fff;
+                text-shadow: 0 2px 2px #000;
+                
+  }
+  .titlesub {
+        font-family:    Rijksoverheid, Arial, Helvetica, sans-serif;    
+                font-size:      30px;                
                 color: #fff;
                 text-shadow: 0 2px 2px #000;
                 
@@ -89,7 +127,7 @@
     position: absolute;
             bottom: 0;
             left: 0;
-    background-color: #eef7fb;
+    background-color: #ffffff;
     height: 35px;
     width: 100%;
     display: flex;
@@ -104,7 +142,7 @@
 </head>
 <body>
 
-<div id="logo">
+<div id="logo" style="background-color: #ffffff;">
   <img id="bld-img-logo" class="logo" style="height: 107.1px;" src="bld_logo.svg" alt="Logo Belastingdienst | Ministerie van Financiën, link naar homepage van Belastingdienst">
     </div>
 
@@ -112,18 +150,21 @@
  
   <div id="menu" class="menu">
 
-  <button class="home"> <img src="home-logo.png"> home</button>
+    
+  <button class="buttonheader" style="margin-left: 70px; padding-left: 13px;"> <div class="buttoncenter"><img src="home-logo.png"> Home </div></button>
+  <button class="buttonheader" style="padding-left: 13px; width: 220px;"> <div class="buttoncenter"><img src="manuel.png" style="margin-right: 10px;"> Gebruikershandleiding </div></button>
 
-<!-- <div id="home" class="home">
-  <img src="home-logo.png">
-  Home
-</div> -->
 
- - Gebruikershandeleiding
 </div></div>
+
 <div id="title" class="title">
- <span style="padding-left: 50px;"> Transcribeer tool </span>
+  <div class="titlemain" style="padding-left: 50px;"> Transcribeer tool </div>
+  <div class="titlesub" style="padding-left: 50px;"> Controleer het transcipt aan de hand van de audio-opname  </div>
 </div>
+
+
+<!-- body -->
+
 
 <div id="transcription">
 
@@ -135,6 +176,10 @@
     <button class="upload-btn" onclick="document.getElementById('fileInput').click();" style="background-image: url('upload.png');">File Upload</button>
   </div>
 </div>
+
+
+
+<!-- /body -->
 
 <div id="bottom" class="bottom">
   <span style="padding-left: 50px;">Copyright</span>
